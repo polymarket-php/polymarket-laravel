@@ -1,0 +1,11 @@
+includes:
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+
+parameters:
+    level: 9
+    paths:
+        - src
+        - tests
+    tmpDir: build/phpstan
+    ignoreErrors:
+        - '#Cannot call method set\(\) on mixed\.#'
