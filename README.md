@@ -4,17 +4,12 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/danielgnh/polymarket-laravel/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/danielgnh/polymarket-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/danielgnh/polymarket-laravel.svg?style=flat-square)](https://packagist.org/packages/danielgnh/polymarket-laravel)
 
-A Laravel adapter for the [Polymarket PHP SDK](https://github.com/danielgnh/polymarket-php), providing seamless integration with prediction markets in your Laravel applications.
+This is a Laravel adapter for the [Polymarket PHP SDK](https://github.com/danielgnh/polymarket-php), providing easy ways to integrate polymarket in your Laravel application.
 
-## Features
+## Requirements
 
-- 🚀 Zero-configuration setup with Laravel auto-discovery
-- 🎯 Facade support for convenient static access
-- ⚙️ Publishable configuration with environment variable support
-- 🔄 Singleton client instance for optimal performance
-- 📊 Access to both Gamma API (market data) and CLOB API (trading)
-- ✅ Comprehensive test coverage
-- 🔧 Laravel 10 & 11 support
+- PHP 8.1 or higher
+- Laravel 10.x or 11.x
 
 ## Installation
 
@@ -113,63 +108,6 @@ class MarketController extends Controller
         $market = $this->polymarket->gamma()->markets()->get($id);
 
         return view('markets.show', compact('market'));
-    }
-}
-```
-
-### In Artisan Commands
-
-Use the facade or dependency injection in your commands:
-
-```php
-use Danielgnh\PolymarketLaravel\Facades\Polymarket;
-use Illuminate\Console\Command;
-
-class FetchMarketsCommand extends Command
-{
-    protected $signature = 'markets:fetch';
-
-    protected $description = 'Fetch and display Polymarket markets';
-
-    public function handle()
-    {
-        $this->info('Fetching markets...');
-
-        $markets = Polymarket::gamma()->markets()->all(['limit' => 10]);
-
-        foreach ($markets as $market) {
-            $this->line("- {$market['question']}");
-        }
-
-        $this->info('Done!');
-    }
-}
-```
-
-### In Queued Jobs
-
-The client is automatically resolved from the container:
-
-```php
-use Danielgnh\PolymarketPhp\Client;
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-
-class ProcessMarketData implements ShouldQueue
-{
-    use Dispatchable, InteractsWithQueue, Queueable;
-
-    public function __construct(
-        private string $marketId
-    ) {}
-
-    public function handle(Client $polymarket)
-    {
-        $market = $polymarket->gamma()->markets()->get($this->marketId);
-
-        // Process market data...
     }
 }
 ```
@@ -279,9 +217,6 @@ The package includes comprehensive tests:
 # Run tests
 composer test
 
-# Run tests with coverage
-composer test-coverage
-
 # Run static analysis
 composer analyse
 
@@ -345,18 +280,13 @@ POLYMARKET_GAMMA_BASE_URL=https://custom-gamma-api.example.com
 POLYMARKET_CLOB_BASE_URL=https://custom-clob-api.example.com
 ```
 
-## Requirements
-
-- PHP 8.1 or higher
-- Laravel 10.x or 11.x
-
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on recent changes.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! In case if you found any bug or have an idea just open an issue and create a Pull Request.
 
 ## Security
 
