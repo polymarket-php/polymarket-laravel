@@ -68,6 +68,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Bridge API Base URL
+    |--------------------------------------------------------------------------
+    |
+    | The base URL for the Polymarket Bridge API (cross-chain deposits).
+    | This API handles deposits from various chains including Ethereum,
+    | Arbitrum, Base, Optimism, Solana, and Bitcoin. Deposits are
+    | automatically converted to USDC.e on Polygon.
+    |
+    */
+
+    'bridge_base_url' => env('POLYMARKET_BRIDGE_BASE_URL', 'https://bridge-api.polymarket.com'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Request Timeout
     |--------------------------------------------------------------------------
     |

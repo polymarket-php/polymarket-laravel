@@ -30,6 +30,7 @@ class PolymarketServiceProvider extends PackageServiceProvider
                 options: [
                     'gamma_base_url' => $config->get('polymarket.gamma_base_url'),
                     'clob_base_url' => $config->get('polymarket.clob_base_url'),
+                    'bridge_base_url' => $config->get('polymarket.bridge_base_url'),
                     'timeout' => $config->get('polymarket.timeout'),
                     'retries' => $config->get('polymarket.retries'),
                     'verify_ssl' => $config->get('polymarket.verify_ssl'),
@@ -50,6 +51,7 @@ class PolymarketServiceProvider extends PackageServiceProvider
                 'Private Key Configured' => config('polymarket.private_key') ? '✓' : '✗',
                 'Gamma URL' => config('polymarket.gamma_base_url'),
                 'CLOB URL' => config('polymarket.clob_base_url'),
+                'Bridge URL' => config('polymarket.bridge_base_url'),
             ]);
         }
     }
