@@ -3,7 +3,10 @@
 declare(strict_types=1);
 
 use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+use Danielgnh\PolymarketPhp\Bridge;
 use Danielgnh\PolymarketPhp\Client;
+use Danielgnh\PolymarketPhp\Clob;
+use Danielgnh\PolymarketPhp\Gamma;
 
 it('resolves the facade to the client', function () {
     $client = Polymarket::getFacadeRoot();
@@ -21,11 +24,17 @@ it('returns the same instance as the container', function () {
 it('provides access to gamma api through facade', function () {
     $gamma = Polymarket::gamma();
 
-    expect($gamma)->toBeInstanceOf(\Danielgnh\PolymarketPhp\Gamma::class);
+    expect($gamma)->toBeInstanceOf(Gamma::class);
 });
 
 it('provides access to clob api through facade', function () {
     $clob = Polymarket::clob();
 
-    expect($clob)->toBeInstanceOf(\Danielgnh\PolymarketPhp\Clob::class);
+    expect($clob)->toBeInstanceOf(Clob::class);
+});
+
+it('provides access to bridge api through facade', function () {
+    $bridge = Polymarket::bridge();
+
+    expect($bridge)->toBeInstanceOf(Bridge::class);
 });
