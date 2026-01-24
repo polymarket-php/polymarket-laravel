@@ -9,7 +9,7 @@ This is a Laravel adapter for the [Polymarket PHP SDK](https://github.com/daniel
 ## Requirements
 
 - PHP 8.1 or higher
-- Laravel 10.x or 11.x
+- Laravel 10.x, 11.x, or 12.x
 
 ## Installation
 
@@ -60,6 +60,7 @@ All configuration options can be customized in `config/polymarket.php`:
 | `chain_id` | `POLYMARKET_CHAIN_ID` | `137` | Blockchain network (137 = Polygon mainnet) |
 | `gamma_base_url` | `POLYMARKET_GAMMA_BASE_URL` | `https://gamma-api.polymarket.com` | Gamma API base URL |
 | `clob_base_url` | `POLYMARKET_CLOB_BASE_URL` | `https://clob.polymarket.com` | CLOB API base URL |
+| `bridge_base_url` | `POLYMARKET_BRIDGE_BASE_URL` | `https://bridge-api.polymarket.com` | Bridge API base URL |
 | `timeout` | `POLYMARKET_TIMEOUT` | `30` | Request timeout in seconds |
 | `retries` | `POLYMARKET_RETRIES` | `3` | Number of retry attempts |
 | `verify_ssl` | `POLYMARKET_VERIFY_SSL` | `true` | Enable SSL certificate verification |
@@ -135,6 +136,19 @@ $orders = Polymarket::clob()->orders()->list();
 
 // Cancel an order
 Polymarket::clob()->orders()->cancel($orderId);
+```
+
+## Bridge API (Cross-Chain Deposits)
+
+The Bridge API enables deposits from multiple chains, automatically converting to USDC.e on Polygon:
+
+```php
+use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+
+// Access the Bridge API
+$bridge = Polymarket::bridge();
+
+// Supported chains: Ethereum, Arbitrum, Base, Optimism, Solana, Bitcoin
 ```
 
 ## Market Data Examples
