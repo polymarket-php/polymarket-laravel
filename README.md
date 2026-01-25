@@ -1,10 +1,10 @@
 # Polymarket Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/danielgnh/polymarket-laravel.svg?style=flat-square)](https://packagist.org/packages/danielgnh/polymarket-laravel)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/danielgnh/polymarket-laravel/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/danielgnh/polymarket-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/danielgnh/polymarket-laravel.svg?style=flat-square)](https://packagist.org/packages/danielgnh/polymarket-laravel)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/polymarket-php/polymarket-laravel.svg?style=flat-square)](https://packagist.org/packages/polymarket-php/polymarket-laravel)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/polymarket-php/polymarket-laravel/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/polymarket-php/polymarket-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/polymarket-php/polymarket-laravel.svg?style=flat-square)](https://packagist.org/packages/polymarket-php/polymarket-laravel)
 
-This is a Laravel adapter for the [Polymarket PHP SDK](https://github.com/danielgnh/polymarket-php), providing easy ways to integrate polymarket in your Laravel application.
+This is a Laravel adapter for the [Polymarket PHP SDK](https://github.com/polymarket-php/polymarket-php), providing easy ways to integrate polymarket in your Laravel application.
 
 ## Requirements
 
@@ -16,7 +16,7 @@ This is a Laravel adapter for the [Polymarket PHP SDK](https://github.com/daniel
 You can install the package via Composer:
 
 ```bash
-composer require danielgnh/polymarket-laravel
+composer require polymarket-php/polymarket-laravel
 ```
 
 ### Quick Setup

@@ -1,6 +1,9 @@
 {
-    "name": "danielgnh/polymarket-laravel",
+    "name": "polymarket-php/polymarket-laravel",
     "description": "Laravel adapter for the Polymarket PHP - Integrate prediction markets into your Laravel applications",
+    "replace": {
+        "danielgnh/polymarket-laravel": "^0.1"
+    },
     "keywords": [
         "polymarket",
         "laravel",
@@ -9,7 +12,7 @@
         "laravel trading agent",
         "polymarket framework"
     ],
-    "homepage": "https://github.com/danielgnh/polymarket-laravel",
+    "homepage": "https://github.com/polymarket-php/polymarket-laravel",
     "license": "MIT",
     "authors": [
         {
@@ -19,7 +22,7 @@
     ],
     "require": {
         "php": "^8.1",
-        "danielgnh/polymarket-php": "^1.1",
+        "polymarket-php/polymarket-php": "^1.1",
         "illuminate/contracts": "^10.0|^11.0|^12.0",
         "spatie/laravel-package-tools": "^1.16"
     },
