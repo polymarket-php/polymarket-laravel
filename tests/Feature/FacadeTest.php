@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-use Danielgnh\PolymarketLaravel\Facades\Polymarket;
 use PolymarketPhp\Polymarket\Bridge;
 use PolymarketPhp\Polymarket\Client;
 use PolymarketPhp\Polymarket\Clob;
 use PolymarketPhp\Polymarket\Gamma;
+use PolymarketPhp\PolymarketLaravel\Facades\Polymarket;
 
 it('resolves the facade to the client', function () {
     $client = Polymarket::getFacadeRoot();

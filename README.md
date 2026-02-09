@@ -72,7 +72,7 @@ All configuration options can be customized in `config/polymarket.php`:
 The facade provides convenient static access to the Polymarket client:
 
 ```php
-use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+use PolymarketPhp\PolymarketLaravel\Facades\Polymarket;
 
 // Fetch markets
 $markets = Polymarket::gamma()->markets()->all();
@@ -118,7 +118,7 @@ class MarketController extends Controller
 For trading operations, you need to configure both an API key and private key:
 
 ```php
-use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+use PolymarketPhp\PolymarketLaravel\Facades\Polymarket;
 
 // Authenticate for trading
 Polymarket::auth();
@@ -143,7 +143,7 @@ Polymarket::clob()->orders()->cancel($orderId);
 The Bridge API enables deposits from multiple chains, automatically converting to USDC.e on Polygon:
 
 ```php
-use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+use PolymarketPhp\PolymarketLaravel\Facades\Polymarket;
 
 // Access the Bridge API
 $bridge = Polymarket::bridge();
@@ -156,7 +156,7 @@ $bridge = Polymarket::bridge();
 ### Fetching All Markets
 
 ```php
-use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+use PolymarketPhp\PolymarketLaravel\Facades\Polymarket;
 
 // Get all markets with pagination
 $markets = Polymarket::gamma()->markets()->all([
@@ -200,11 +200,11 @@ echo "Liquidity: {$market['liquidity']}" . PHP_EOL;
 The SDK throws specific exceptions for different error scenarios:
 
 ```php
-use Danielgnh\PolymarketPhp\Exceptions\AuthenticationException;
-use Danielgnh\PolymarketPhp\Exceptions\NotFoundException;
-use Danielgnh\PolymarketPhp\Exceptions\RateLimitException;
-use Danielgnh\PolymarketPhp\Exceptions\ValidationException;
-use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+use PolymarketPhp\Polymarket\Exceptions\AuthenticationException;
+use PolymarketPhp\Polymarket\Exceptions\NotFoundException;
+use PolymarketPhp\Polymarket\Exceptions\RateLimitException;
+use PolymarketPhp\Polymarket\Exceptions\ValidationException;
+use PolymarketPhp\PolymarketLaravel\Facades\Polymarket;
 
 try {
     $market = Polymarket::gamma()->markets()->get($marketId);
@@ -243,7 +243,7 @@ composer format
 You can easily mock the Polymarket client in your tests:
 
 ```php
-use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+use PolymarketPhp\PolymarketLaravel\Facades\Polymarket;
 use PolymarketPhp\Polymarket\Client;
 
 public function test_it_fetches_markets()

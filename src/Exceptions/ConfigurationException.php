@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Danielgnh\PolymarketLaravel\Exceptions;
+namespace PolymarketPhp\PolymarketLaravel\Exceptions;
 
 use RuntimeException;
 

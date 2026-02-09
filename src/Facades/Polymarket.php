@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Danielgnh\PolymarketLaravel\Facades;
+namespace PolymarketPhp\PolymarketLaravel\Facades;
 
 use Illuminate\Support\Facades\Facade;
 use PolymarketPhp\Polymarket\Bridge;
