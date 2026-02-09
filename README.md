@@ -89,7 +89,7 @@ $market = Polymarket::gamma()->markets()->get('market-id');
 Inject the client directly into your classes:
 
 ```php
-use Danielgnh\PolymarketPhp\Client;
+use PolymarketPhp\Polymarket\Client;
 
 class MarketController extends Controller
 {
@@ -243,8 +243,8 @@ composer format
 You can easily mock the Polymarket client in your tests:
 
 ```php
-use Danielgnh\PolymarketPhp\Client;
 use Danielgnh\PolymarketLaravel\Facades\Polymarket;
+use PolymarketPhp\Polymarket\Client;
 
 public function test_it_fetches_markets()
 {

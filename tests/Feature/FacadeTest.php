@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Danielgnh\PolymarketLaravel\Facades\Polymarket;
-use Danielgnh\PolymarketPhp\Bridge;
-use Danielgnh\PolymarketPhp\Client;
-use Danielgnh\PolymarketPhp\Clob;
-use Danielgnh\PolymarketPhp\Gamma;
+use PolymarketPhp\Polymarket\Bridge;
+use PolymarketPhp\Polymarket\Client;
+use PolymarketPhp\Polymarket\Clob;
+use PolymarketPhp\Polymarket\Gamma;
 
 it('resolves the facade to the client', function () {
     $client = Polymarket::getFacadeRoot();

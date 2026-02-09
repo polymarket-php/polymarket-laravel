@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Danielgnh\PolymarketPhp\Client;
+use PolymarketPhp\Polymarket\Client;
 
 it('registers the client as a singleton', function () {
     $client1 = app(Client::class);
