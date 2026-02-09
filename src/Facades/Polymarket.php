@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace Danielgnh\PolymarketLaravel\Facades;
 
-use Danielgnh\PolymarketPhp\Bridge;
-use Danielgnh\PolymarketPhp\Client;
-use Danielgnh\PolymarketPhp\Clob;
-use Danielgnh\PolymarketPhp\Gamma;
 use Illuminate\Support\Facades\Facade;
+use PolymarketPhp\Polymarket\Bridge;
+use PolymarketPhp\Polymarket\Client;
+use PolymarketPhp\Polymarket\Clob;
+use PolymarketPhp\Polymarket\Gamma;
 
 /**
  * @method static Gamma gamma() Get the Gamma API client for market data operations

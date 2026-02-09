@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Danielgnh\PolymarketLaravel;
 
 use Danielgnh\PolymarketLaravel\Commands\PolymarketInstallCommand;
-use Danielgnh\PolymarketPhp\Client;
 use Illuminate\Foundation\Console\AboutCommand;
+use PolymarketPhp\Polymarket\Client;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
