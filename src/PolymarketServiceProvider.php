@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Danielgnh\PolymarketLaravel;
+namespace PolymarketPhp\PolymarketLaravel;
 
-use Danielgnh\PolymarketLaravel\Commands\PolymarketInstallCommand;
 use Illuminate\Foundation\Console\AboutCommand;
 use PolymarketPhp\Polymarket\Client;
+use PolymarketPhp\PolymarketLaravel\Commands\PolymarketInstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 

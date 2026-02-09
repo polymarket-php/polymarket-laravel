@@ -37,12 +37,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Danielgnh\\PolymarketLaravel\\": "src/"
+            "PolymarketPhp\\PolymarketLaravel\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Danielgnh\\PolymarketLaravel\\Tests\\": "tests/"
+            "PolymarketPhp\\PolymarketLaravel\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -59,10 +59,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Danielgnh\\PolymarketLaravel\\PolymarketServiceProvider"
+                "PolymarketPhp\\PolymarketLaravel\\PolymarketServiceProvider"
             ],
             "aliases": {
-                "Polymarket": "Danielgnh\\PolymarketLaravel\\Facades\\Polymarket"
+                "Polymarket": "PolymarketPhp\\PolymarketLaravel\\Facades\\Polymarket"
             }
         }
     },

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Danielgnh\PolymarketLaravel\Commands;
+namespace PolymarketPhp\PolymarketLaravel\Commands;
 
 use Illuminate\Console\Command;
 

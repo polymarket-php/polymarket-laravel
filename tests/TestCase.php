@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Danielgnh\PolymarketLaravel\Tests;
+namespace PolymarketPhp\PolymarketLaravel\Tests;
 
-use Danielgnh\PolymarketLaravel\PolymarketServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
+use PolymarketPhp\PolymarketLaravel\Facades\Polymarket;
+use PolymarketPhp\PolymarketLaravel\PolymarketServiceProvider;
 
 abstract class TestCase extends Orchestra
 {
@@ -26,7 +27,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageAliases($app): array
     {
         return [
-            'Polymarket' => \Danielgnh\PolymarketLaravel\Facades\Polymarket::class,
+            'Polymarket' => Polymarket::class,
         ];
     }
 
